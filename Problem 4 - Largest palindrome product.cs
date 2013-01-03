@@ -13,19 +13,17 @@ namespace projecteuler.net
         {
             int largest = 0;
 
-            for (int i = 999; i > 99; i--)
-            {
+            for (int i = 999; i > 99; i -= 2)
                 for (int j = i - 1; j > 99; j--)
                 {
                     int pal = i * j;
-                    if (IsPalindrome(pal))
+                    if (IsPalindrome(pal) && largest < pal)
                     {
-                        if (largest < pal)
-                            largest = pal;
+                        largest = pal;
                         break;
                     }
+
                 }
-            }
 
             Console.WriteLine(largest);
 
