@@ -10,6 +10,9 @@ namespace projecteuler.net
         static void Main(string[] args)
         {
             Problem1.Multiplesof3And5();
+            Problem1.Second();
+
+            Console.Read();
         }
     }
 }
