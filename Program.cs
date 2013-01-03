@@ -9,8 +9,8 @@ namespace projecteuler.net
     {
         static void Main(string[] args)
         {
-            
-            Problem2.First();
+
+            Problem3.First();
 
             Console.Read();
         }
