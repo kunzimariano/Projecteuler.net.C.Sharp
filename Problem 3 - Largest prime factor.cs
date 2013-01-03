@@ -23,7 +23,51 @@ namespace projecteuler.net
                     largest = i;
             }
 
-            Console.WriteLine(largest);
+            Console.WriteLine("First: " + largest);
+        }
+
+
+        public static void Second()
+        {
+            long n = 600851475143;
+            long largest = 0;
+            long factor = 2;
+            var topPrime = (long)Math.Sqrt(n);
+
+            // for 2
+            while (1 < n && factor < topPrime)
+            {
+                while (IsFactor(factor, ref n))
+                {
+                    largest = factor;
+                }
+
+                factor += 1;
+            }
+
+            // for odds
+            while (1 < n && factor < topPrime)
+            {
+                while (IsFactor(factor, ref n))
+                {
+                    largest = factor;
+                }
+
+                factor += 2;
+            }
+
+            Console.WriteLine("Second: " + largest);
+        }
+
+        private static bool IsFactor(long factor, ref long n)
+        {
+            if (n % factor == 0)
+            {
+                n = n / factor;
+                return true;
+            }
+
+            return false;
         }
 
         private static bool IsPrime(long number)
