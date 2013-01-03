@@ -49,6 +49,7 @@
     <Compile Include="Problem 4 - Largest palindrome product.cs" />
     <Compile Include="Problem 5 - Smallest multiple.cs" />
     <Compile Include="Problem 6 - Sum square difference.cs" />
+    <Compile Include="Problem 7 - 10001st prime.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -72,12 +72,12 @@ namespace projecteuler.net
 
         private static bool IsPrime(long number)
         {
-            var top = (long)Math.Sqrt(number);
+            double top = Math.Sqrt(number);
 
             if (number % 2 == 0)
                 return false;
 
-            for (int j = 3; j < top; j += 2)
+            for (int j = 3; j <= top; j += 2)
             {
                 if (number % j == 0)
                     return false;
