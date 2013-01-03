@@ -10,7 +10,7 @@ namespace projecteuler.net
         static void Main(string[] args)
         {
 
-            Problem5.First();
+            Problem6.First();
 
             Console.WriteLine("Press <ENTER> to finish.");
             Console.Read();
