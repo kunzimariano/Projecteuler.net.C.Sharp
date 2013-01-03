@@ -11,6 +11,7 @@ namespace projecteuler.net
         {
 
             Problem6.First();
+            Problem6.Second();
 
             Console.WriteLine("Press <ENTER> to finish.");
             Console.Read();

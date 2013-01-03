@@ -18,6 +18,7 @@ namespace projecteuler.net
 
     public class Problem6
     {
+        // half brute force, first attempt
         public static void First()
         {
             //sum of the squares
@@ -28,15 +29,25 @@ namespace projecteuler.net
             }
 
             // square of the sum
-            double sum2 = Math.Pow(SumOfN(100), 2);
+            double sum2 = SquareOfSum(100);
 
             Console.WriteLine(sum2 - sum1);
         }
 
-        private static long SumOfN(long n)
+        // no brute force, proper solution
+        public static void Second()
         {
-            double temp = (double)n / 2;
-            return (long)(temp * (n + 1));
+            Console.WriteLine(SquareOfSum(100) - SumOfSquares(100));
+        }
+
+        private static double SquareOfSum(double n)
+        {
+            return Math.Pow(n * (n + 1) / 2, 2);
+        }
+
+        private static double SumOfSquares(double n)
+        {
+            return (2 * n + 1) * (n + 1) * n / 6;
         }
     }
 }
