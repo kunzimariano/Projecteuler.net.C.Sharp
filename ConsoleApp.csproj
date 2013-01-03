@@ -47,6 +47,7 @@
     <Compile Include="Problem 2 - Even Fibonacci numbers.cs" />
     <Compile Include="Problem 3 - Largest prime factor.cs" />
     <Compile Include="Problem 4 - Largest palindrome product.cs" />
+    <Compile Include="Problem 5 - Smallest multiple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
