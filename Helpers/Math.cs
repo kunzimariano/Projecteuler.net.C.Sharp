@@ -29,7 +29,7 @@ namespace ConsoleApp.Helpers
                 // all primes greater than 3 can be written in the form 6k+/-1.
                 if (n % (i + 2) == 0)
                     return false;
-                i += 2;
+                i += 6;
             }
 
             return true;

@@ -44,15 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Math.cs" />
-    <Compile Include="Problems\Problem 1 - Multiples of 3 and 5.cs" />
-    <Compile Include="Problems\Problem 2 - Even Fibonacci numbers.cs" />
-    <Compile Include="Problems\Problem 3 - Largest prime factor.cs" />
-    <Compile Include="Problems\Problem 4 - Largest palindrome product.cs" />
-    <Compile Include="Problems\Problem 5 - Smallest multiple.cs" />
-    <Compile Include="Problems\Problem 6 - Sum square difference.cs" />
-    <Compile Include="Problems\Problem 7 - 10001st prime.cs" />
-    <Compile Include="Problems\Problem 8 - Largest product in a series.cs" />
-    <Compile Include="Problems\Problem 9 - Special Pythagorean triplet.cs" />
+    <Compile Include="Problems\Problem 001 - Multiples of 3 and 5.cs" />
+    <Compile Include="Problems\Problem 010 - Summation of primes.cs" />
+    <Compile Include="Problems\Problem 002 - Even Fibonacci numbers.cs" />
+    <Compile Include="Problems\Problem 003 - Largest prime factor.cs" />
+    <Compile Include="Problems\Problem 004 - Largest palindrome product.cs" />
+    <Compile Include="Problems\Problem 005 - Smallest multiple.cs" />
+    <Compile Include="Problems\Problem 006 - Sum square difference.cs" />
+    <Compile Include="Problems\Problem 007 - 10001st prime.cs" />
+    <Compile Include="Problems\Problem 008 - Largest product in a series.cs" />
+    <Compile Include="Problems\Problem 009 - Special Pythagorean triplet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
