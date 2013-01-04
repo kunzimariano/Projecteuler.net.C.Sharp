@@ -54,6 +54,7 @@
     <Compile Include="Problems\Problem 007 - 10001st prime.cs" />
     <Compile Include="Problems\Problem 008 - Largest product in a series.cs" />
     <Compile Include="Problems\Problem 009 - Special Pythagorean triplet.cs" />
+    <Compile Include="Problems\Problem 011 - Largest product in a grid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
