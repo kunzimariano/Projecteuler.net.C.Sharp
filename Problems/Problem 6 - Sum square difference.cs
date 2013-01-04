@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace projecteuler.net
+namespace ConsoleApp.Problems
 {
-
-
     //The sum of the squares of the first ten natural numbers is,
     //1^2 + 2^2 + ... + 10^2 = 385
 

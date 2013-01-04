@@ -8,8 +8,8 @@
     <ProjectGuid>{04DF1CA6-BCA7-403B-957F-F82846CA4C82}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>projecteuler.net</RootNamespace>
-    <AssemblyName>projecteuler.net</AssemblyName>
+    <RootNamespace>ConsoleApp</RootNamespace>
+    <AssemblyName>ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,13 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Problem 1 - Multiples of 3 and 5.cs" />
-    <Compile Include="Problem 2 - Even Fibonacci numbers.cs" />
-    <Compile Include="Problem 3 - Largest prime factor.cs" />
-    <Compile Include="Problem 4 - Largest palindrome product.cs" />
-    <Compile Include="Problem 5 - Smallest multiple.cs" />
-    <Compile Include="Problem 6 - Sum square difference.cs" />
-    <Compile Include="Problem 7 - 10001st prime.cs" />
+    <Compile Include="Helpers\Math.cs" />
+    <Compile Include="Problems\Problem 1 - Multiples of 3 and 5.cs" />
+    <Compile Include="Problems\Problem 2 - Even Fibonacci numbers.cs" />
+    <Compile Include="Problems\Problem 3 - Largest prime factor.cs" />
+    <Compile Include="Problems\Problem 4 - Largest palindrome product.cs" />
+    <Compile Include="Problems\Problem 5 - Smallest multiple.cs" />
+    <Compile Include="Problems\Problem 6 - Sum square difference.cs" />
+    <Compile Include="Problems\Problem 7 - 10001st prime.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

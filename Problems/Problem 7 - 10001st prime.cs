@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace projecteuler.net
+
+namespace ConsoleApp.Problems
 {
     //  By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
     //  What is the 10 001st prime number?
@@ -16,7 +14,7 @@ namespace projecteuler.net
 
             for (int i = 3; ; i = i + 2)
             {
-                if (IsPrime(i))
+                if (Helpers.Math.IsPrime(i))
                 {
                     count++;
                     if (count == 10001)
@@ -28,20 +26,6 @@ namespace projecteuler.net
             }
         }
 
-        private static bool IsPrime(long number)
-        {
-            double top = Math.Sqrt(number);
-
-            if (number % 2 == 0)
-                return false;
-
-            for (int j = 3; j <= top; j += 2)
-            {
-                if (number % j == 0)
-                    return false;
-            }
-
-            return true;
-        }
+        
     }
 }

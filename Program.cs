@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using ConsoleApp.Problems;
 
-namespace projecteuler.net
+namespace ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             Problem7.First();
 
             Console.WriteLine("Press <ENTER> to finish.");
