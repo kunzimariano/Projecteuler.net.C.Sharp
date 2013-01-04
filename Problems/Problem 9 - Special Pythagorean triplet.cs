@@ -31,7 +31,11 @@ namespace ConsoleApp.Problems
                     for (int k = 0; k < p.Length; k++)
                     {
                         if (p[i] + p[j] == p[k] && (i + 1 + j + 1 + k + 1) == 1000)
+                        {
                             Console.WriteLine((i + 1) * (j + 1) * (k + 1));
+                            break;
+                        }
+
                     }
                 }
 
