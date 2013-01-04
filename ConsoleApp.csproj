@@ -51,6 +51,7 @@
     <Compile Include="Problems\Problem 5 - Smallest multiple.cs" />
     <Compile Include="Problems\Problem 6 - Sum square difference.cs" />
     <Compile Include="Problems\Problem 7 - 10001st prime.cs" />
+    <Compile Include="Problems\Problem 8 - Largest product in a series.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
