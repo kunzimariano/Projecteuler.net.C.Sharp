@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp.Helpers
 {
@@ -35,15 +36,56 @@ namespace ConsoleApp.Helpers
             return true;
         }
 
-        public static bool IsFactor(long factor, ref long n)
+        public static bool IsFactor(long factor, long n)
         {
             if (n % factor == 0)
-            {
-                n = n / factor;
                 return true;
+            return false;
+        }
+
+        public static long GetNPrime(long n)
+        {
+            if (n < 2)
+                throw new ArgumentException("N should be greater than 1.", "n");
+
+            int count = 1;
+
+            for (int i = 3; ; i = i + 2)
+            {
+                if (IsPrime(i))
+                {
+                    count++;
+                    if (count == n)
+                    {
+                        return i;
+                    }
+                }
             }
 
-            return false;
+        }
+
+        public static List<long> GetFirstNPrimes(long n)
+        {
+            if (n < 2)
+                throw new ArgumentException("N should be greater than 1.", "n");
+
+            int count = 1;
+
+            var result = new List<long>() { 1 };
+
+            for (int i = 3; ; i = i + 2)
+            {
+                if (IsPrime(i))
+                {
+                    count++;
+                    result.Add(i);
+                    if (count == n)
+                    {
+                        return result;
+                    }
+                }
+            }
+
         }
     }
 }

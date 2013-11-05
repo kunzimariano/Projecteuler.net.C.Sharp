@@ -7,7 +7,8 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Problem11.First();
+            new Problem12().First();
+
 
             Console.WriteLine("Press <ENTER> to finish.");
             Console.Read();

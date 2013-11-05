@@ -34,7 +34,7 @@ namespace ConsoleApp.Problems
             // for 2
             while (1 < n && factor < topPrime)
             {
-                while (Helpers.Math.IsFactor(factor, ref n))
+                while (IsFactor(factor, ref n))
                 {
                     largest = factor;
                 }
@@ -45,7 +45,7 @@ namespace ConsoleApp.Problems
             // for odds
             while (1 < n && factor < topPrime)
             {
-                while (Helpers.Math.IsFactor(factor, ref n))
+                while (IsFactor(factor, ref n))
                 {
                     largest = factor;
                 }
@@ -54,6 +54,17 @@ namespace ConsoleApp.Problems
             }
 
             Console.WriteLine("Second: " + largest);
+        }
+
+        private static bool IsFactor(long factor, ref long n)
+        {
+            if (n % factor == 0)
+            {
+                n = n / factor;
+                return true;
+            }
+
+            return false;
         }
     }
 }
