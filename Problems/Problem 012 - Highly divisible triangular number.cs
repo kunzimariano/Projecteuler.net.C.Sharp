@@ -25,42 +25,68 @@ namespace ConsoleApp.Problems
 
     public class Problem12
     {
-        // Store previous triangle and previous natural number
+        readonly List<int> _firstNPrimes = Helpers.Math.GetFirstNPrimes(500);
 
         public void First()
         {
-
-
-
             long triangle = 1;
             for (int i = 1; true; i++)
             {
                 triangle = GetNextTriangle(triangle, i);
-                Console.WriteLine(triangle);
+                int factors = CountFactors(triangle);
+                if (500 < factors)
+                    break;
             }
+            System.Diagnostics.Debug.Print("Triangle {0}", triangle);
         }
 
         private long GetNextTriangle(long previousTriangle, long previousNatural)
         {
             return previousTriangle + previousNatural + 1;
-
         }
 
-        private long GetTriangle(long n)
+        private int CountFactors(long n)
         {
-            long result = 0;
-            for (long i = 1; i <= n; i++)
+            var primeFactorsCount = new Dictionary<int, int>();
+
+            int count = 1;
+
+            foreach (int prime in _firstNPrimes)
             {
-                result += i;
+                if (n == 1) break;
+
+                int divisionTimes = CountDivisionTimes(n, prime);
+                if (0 < divisionTimes)
+                {
+                    primeFactorsCount.Add(prime, divisionTimes);
+                    var foo = (int)Math.Pow(prime, divisionTimes);
+                    n = n / foo;
+                }
+            }
+
+            foreach (KeyValuePair<int, int> valuePair in primeFactorsCount)
+            {
+                count *= (valuePair.Value + 1);
+            }
+
+            return count;
+        }
+
+        private int CountDivisionTimes(long n, long divisor)
+        {
+            int result = 0;
+
+            while (Helpers.Math.IsFactor(n, divisor))
+            {
+                result++;
+                n = n / divisor;
             }
 
             return result;
         }
 
-        private int CountDivisors()
-        {
-            return 0;
-        }
+
+
     }
 
 

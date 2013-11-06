@@ -36,7 +36,7 @@ namespace ConsoleApp.Helpers
             return true;
         }
 
-        public static bool IsFactor(long factor, long n)
+        public static bool IsFactor(long n, long factor)
         {
             if (n % factor == 0)
                 return true;
@@ -64,14 +64,14 @@ namespace ConsoleApp.Helpers
 
         }
 
-        public static List<long> GetFirstNPrimes(long n)
+        public static List<int> GetFirstNPrimes(int n)
         {
             if (n < 2)
                 throw new ArgumentException("N should be greater than 1.", "n");
 
             int count = 1;
 
-            var result = new List<long>() { 1 };
+            var result = new List<int>() { 2 };
 
             for (int i = 3; ; i = i + 2)
             {
