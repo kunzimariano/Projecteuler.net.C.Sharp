@@ -60,6 +60,7 @@
     <Compile Include="Problems\Problem 011 - Largest product in a grid.cs" />
     <Compile Include="Problems\Problem 012 - Highly divisible triangular number.cs" />
     <Compile Include="Problems\Problem 013 - Large sum.cs" />
+    <Compile Include="Problems\Problem 14 - Longest Collatz sequence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
