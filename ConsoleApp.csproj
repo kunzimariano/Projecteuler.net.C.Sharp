@@ -59,6 +59,7 @@
     <Compile Include="Problems\Problem 009 - Special Pythagorean triplet.cs" />
     <Compile Include="Problems\Problem 011 - Largest product in a grid.cs" />
     <Compile Include="Problems\Problem 012 - Highly divisible triangular number.cs" />
+    <Compile Include="Problems\Problem 013 - Large sum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
