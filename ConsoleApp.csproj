@@ -39,6 +39,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,7 +61,8 @@
     <Compile Include="Problems\Problem 011 - Largest product in a grid.cs" />
     <Compile Include="Problems\Problem 012 - Highly divisible triangular number.cs" />
     <Compile Include="Problems\Problem 013 - Large sum.cs" />
-    <Compile Include="Problems\Problem 14 - Longest Collatz sequence.cs" />
+    <Compile Include="Problems\Problem 014 - Longest Collatz sequence.cs" />
+    <Compile Include="Problems\Problem 016 - Power digit sum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

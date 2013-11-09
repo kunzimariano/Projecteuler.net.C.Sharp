@@ -85,7 +85,18 @@ namespace ConsoleApp.Helpers
                     }
                 }
             }
+        }
 
+        public static long Factorial(long n)
+        {
+            long result = n;
+
+            for (long i = n - 1; 0 < i; i--)
+            {
+                result *= i;
+            }
+
+            return result;
         }
     }
 }
