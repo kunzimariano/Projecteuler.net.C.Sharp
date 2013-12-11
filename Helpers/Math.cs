@@ -56,12 +56,9 @@ namespace ConsoleApp.Helpers
                 {
                     count++;
                     if (count == n)
-                    {
                         return i;
-                    }
                 }
             }
-
         }
 
         public static List<int> GetFirstNPrimes(int n)
@@ -80,9 +77,7 @@ namespace ConsoleApp.Helpers
                     count++;
                     result.Add(i);
                     if (count == n)
-                    {
                         return result;
-                    }
                 }
             }
         }
@@ -92,9 +87,7 @@ namespace ConsoleApp.Helpers
             long result = n;
 
             for (long i = n - 1; 0 < i; i--)
-            {
                 result *= i;
-            }
 
             return result;
         }

@@ -7,35 +7,31 @@ namespace ConsoleApp.Problems
 
     public class Problem1
     {
-        // first attempt
-        public static void First()
+        private int _result;
+
+        public void Solve()
         {
-            int result = 0;
-
-            for (int i = 1; i < 1000; i++)
-            {
-                if (i % 3 == 0 || i % 5 == 0)
-                    result += i;
-            }
-
-            Console.WriteLine(result);
+            SumMultiplesOfThree();
+            SumMultiplesOfFive();
+            Console.WriteLine(_result);
         }
 
-        // a more efficient approach
-        public static void Second()
+        private void SumMultiplesOfFive()
         {
-            int result = 0;
-
-            // multiples of 3
-            for (int i = 3; i < 1000; i += 3)
-                result += i;
-
-            // multiples of 5, avoid the already added multiple of 3
             for (int i = 5; i < 1000; i += 5)
-                if (i % 3 != 0)
-                    result += i;
+                if (!IsMultipleOfThree(i))
+                    _result += i;
+        }
 
-            Console.WriteLine(result);
+        private void SumMultiplesOfThree()
+        {
+            for (int i = 3; i < 1000; i += 3)
+                _result += i;
+        }
+
+        private bool IsMultipleOfThree(int i)
+        {
+            return i % 3 == 0;
         }
 
     }

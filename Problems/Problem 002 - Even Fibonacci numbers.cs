@@ -8,24 +8,50 @@ namespace ConsoleApp.Problems
 
     public class Problem2
     {
+        private int _previousTerm;
+        private int _currentTerm;
+        private int _result;
 
-        public static void First()
+        public Problem2()
         {
-            int first = 1;
-            int second = 2;
-            int sum = second;
+            _previousTerm = 1;
+            _currentTerm = 2;
+            _result = _currentTerm;
+        }
 
-            while (second < 4000000)
+        public void Solve()
+        {
+            while (_currentTerm < 4000000)
             {
-                int temp = first + second;
-                first = second;
-                second = temp;
-
-                if (second % 2 == 0)
-                    sum += second;
+                int nextTerm = GetNextTerm();
+                UpdateTerms(nextTerm);
+                AddToResultIfTermIsEven();
             }
 
-            Console.WriteLine(sum);
+            Console.WriteLine(_result);
+        }
+
+        private void AddToResultIfTermIsEven()
+        {
+            if (IsEven(_currentTerm))
+                _result += _currentTerm;
+        }
+
+        private void UpdateTerms(int nextTerm)
+        {
+            _previousTerm = _currentTerm;
+            _currentTerm = nextTerm;
+        }
+
+
+        private int GetNextTerm()
+        {
+            return _previousTerm + _currentTerm;
+        }
+
+        private bool IsEven(int second)
+        {
+            return second % 2 == 0;
         }
     }
 }
