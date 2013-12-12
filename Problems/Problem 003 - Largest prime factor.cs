@@ -6,65 +6,63 @@ namespace ConsoleApp.Problems
     // What is the largest prime factor of the number 600851475143 ?
     public class Problem3
     {
-        public static void First()
+        private static long _number;
+        private static long _largestPrimeFactor;
+        private static long _currentPrimeFactor;
+        private static long _primeBoundary;
+
+        private static void Initialize()
         {
-            const long n = 600851475143;
-            long largest = 0;
-            var topPrime = (long)Math.Sqrt(n);
-
-
-            for (int i = 2; i < topPrime; i++)
-            {
-                // if prime and factor of the enumer
-                if (Helpers.Math.IsPrime(i) && (n % i == 0))
-                    largest = i;
-            }
-
-            Console.WriteLine("First: " + largest);
+            _number = 600851475143;
+            _largestPrimeFactor = 0;
+            _currentPrimeFactor = 2;
+            _primeBoundary = (long)Math.Sqrt(_number);
         }
 
-
-        public static void Second()
+        public static void Solve()
         {
-            long n = 600851475143;
-            long largest = 0;
-            long factor = 2;
-            var topPrime = (long)Math.Sqrt(n);
+            Initialize();
 
-            // for 2
-            while (1 < n && factor < topPrime)
+            while (IsNumberBiggerThanOneAndBelowPrimeBondary())
             {
-                while (IsFactor(factor, ref n))
-                {
-                    largest = factor;
-                }
-
-                factor += 1;
+                if (IsCurrentFactorLarger())
+                    DivideByCurrentFactorAsMuchAsPosible();
+                IncreaseCurrentPrimeFactor();
             }
 
-            // for odds
-            while (1 < n && factor < topPrime)
-            {
-                while (IsFactor(factor, ref n))
-                {
-                    largest = factor;
-                }
-
-                factor += 2;
-            }
-
-            Console.WriteLine("Second: " + largest);
+            Console.WriteLine("Second: " + _largestPrimeFactor);
         }
 
-        private static bool IsFactor(long factor, ref long n)
+        private static bool IsNumberBiggerThanOneAndBelowPrimeBondary()
         {
-            if (n % factor == 0)
+            return 1 < _number && _currentPrimeFactor < _primeBoundary;
+        }
+
+        private static bool IsCurrentFactorLarger()
+        {
+            if (Helpers.Math.IsFactor(_number, _currentPrimeFactor))
             {
-                n = n / factor;
+                _largestPrimeFactor = _currentPrimeFactor;
                 return true;
             }
-
             return false;
+
+        }
+
+        private static void DivideByCurrentFactorAsMuchAsPosible()
+        {
+            while (Helpers.Math.IsFactor(_number, _currentPrimeFactor))
+            {
+                _number = _number / _currentPrimeFactor;
+            }
+        }
+
+        private static void IncreaseCurrentPrimeFactor()
+        {
+            if (_currentPrimeFactor == 2)
+                _currentPrimeFactor += 1;
+            else
+                _currentPrimeFactor += 2;
         }
     }
 }
